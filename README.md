@@ -156,3 +156,38 @@ const App = () => {
 
 export default App;
 ```
+# 레이아웃 구성
+
+- src/layouts/MainLayout.js
+- src/outines/Header.js
+- src/outlines/Footer.js
+
+# 라우팅 구성
+## 회원
+- /member/join : 회원가입
+- /member/login : 로그인
+
+## 설정
+- src/index.js : BrowserRouter 컴포넌트로 감싸기
+```
+root.render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+      <App />
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>,
+);
+
+```
+
+# 없는 페이지
+- * : 없는 페이지 - commons/pages/NotFound.js
+
+## 에러페이지
+> class형 컴포넌트 - componentDidCatch 사용
+
+- commons/pages/Error.js
+- commons/components/ErrorDisplay.js
+
