@@ -7,6 +7,8 @@ import classNames from 'classnames';
 import { color } from '../styles/color';
 import logo from '../images/logo.png'
 import { FaSearch } from "react-icons/fa";
+import MainMenu from './MainMenu';
+
 
 const {primary, dark ,light} = color;
 
@@ -44,9 +46,21 @@ const HeaderBox = styled.header`
       
         button {
           width: 45px;
+          background: ${dark};
+          border: 0;
+          cursor: pointer;
+          
+          svg {
+            color: ${light};
+            font-size: 1.75rem;
+
+          }
         }
+      
         input[type='text']{
           flex-grow:1;
+          border: 5px solid ${dark};
+          padding: 0 10px;
         }
       }
 
@@ -90,6 +104,7 @@ const Header = () => {
         </div>
 
       </section>
+      <MainMenu />
     </HeaderBox>
   );
 };
