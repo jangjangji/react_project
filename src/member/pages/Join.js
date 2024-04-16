@@ -2,19 +2,22 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import JoinForm from '../components/JoinForm';
 import { useTranslation } from 'react-i18next';
+import { MainTitle } from '../components/TitleBox';
+import { OuterBox } from '../components/LayoutBox';
 const Join = () => {
-  const { t } =useTranslation();
+  const { t } = useTranslation();
+
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>{t('회원가입')}</title>
-    </Helmet>
-
-    <h1>{t('회원가입')}</h1>
-    <JoinForm/>
+      </Helmet>
+      <OuterBox>
+        <MainTitle>{t('회원가입')}</MainTitle>
+        <JoinForm />
+      </OuterBox>
     </>
-  )
+  );
 };
 
 export default React.memo(Join);
-
